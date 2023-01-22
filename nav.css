@@ -1,0 +1,93 @@
+body{
+box-sizing: border-box;
+}
+body{height: 100vh;
+background:linear-gradient(45deg,blue, transparent),
+repeating-linear-gradient(to top right, yellow 0%, blue 5%, transparent 5%,transparent 30%),
+repeating-linear-gradient(to top left, yellow 0%, blue 5%, transparent 15%,transparent 10%);
+
+}
+li a{color: black;
+font-size: 16px;
+font-family: sans-serif;
+text-decoration: none;
+display: block;}
+
+
+li{
+    list-style: none;
+    padding: 15px 16px;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    background: rgb(20, 2, 2);
+    height: 2px;
+    width: 18px;
+    position: relative;
+    display: inline-block;
+}
+.toggle::before,.toggle::after{
+    background: rgb(20, 2, 2);
+    height: 2px;
+    content: "";
+    width: 18px;
+    position: absolute;
+    display: inline-block;
+}
+.toggle::before{
+    top: 5px;
+}
+.toggle::after{
+    top: -5px;
+}
+.cl{
+    cursor: pointer;
+}
+.cl{
+    order: 1;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+
+/*tablet menu*/
+@media all and (min-width:468px)
+{
+    .item{justify-content: center;}
+    .item.button{width: auto;
+    order: 1;
+    border-radius: 5px;
+    
+display: block;}
+.toggle{order: 2;}
+.item.button a{color: white;
+background: red;
+padding: 8px 8px;
+border-radius: 8px;
+}
+.button a:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+}
+@media all and ( min-width:768px){
+    .item{display: block;
+        width:auto;
+    }
+    .cl{display: none;}
+    
+}
